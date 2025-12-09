@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #c9002b, #ff99b3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #c9002b;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.foto-principal {
+  width: 200px;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.botones button {
+  background-color: #c9002b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botones button:hover {
+  background-color: #ff4d6d;
+  transform: scale(1.05);
+}
+
+#btnNo {
+  position: absolute;
+}
+
+#mensaje {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #c9002b;
+  font-weight: bold;
+}
+
+.volver {
+  margin-top: 20px;
+  background-color: #ff4d6d;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .foto-principal {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .botones button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
